@@ -80,7 +80,6 @@ const AdminControl = ({ contract }: any) => {
   const { mutateAsync: RefundAll } = useContractCall(contract, "RefundAll");
 
   const handleClick = async (name: string) => {
-    debugger;
     const functionList: {
       [key: string]: any;
     } = {
@@ -122,7 +121,7 @@ const AdminControl = ({ contract }: any) => {
         Admin Controls
       </Typography>
       <Typography variant="body1" sx={{ mb: 2.5 }}>
-        Total Commission to be withdrawn:
+        Total Commission to be withdrawn:{" "}
         {totalCommission &&
           ethers.utils.formatEther(totalCommission?.toString())}{" "}
         {currency}

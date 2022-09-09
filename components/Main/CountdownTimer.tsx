@@ -11,7 +11,6 @@ const timerUnitList = [
 ];
 
 const Renderer = ({ hours, minutes, seconds, completed }: IRenderer) => {
-  console.log({ hours, minutes, seconds, completed });
   return (
     <Box>
       {completed ? (
@@ -36,8 +35,8 @@ const Renderer = ({ hours, minutes, seconds, completed }: IRenderer) => {
           <Stack key={id} flex="1 1 0%">
             <Box
               sx={{
-                p: 4,
-                fontSize: "48px",
+                p: { xs: 2, sm: 4 },
+                fontSize: { xs: "36px", sm: "48px" },
                 textAlign: "center",
                 borderRadius: 1,
                 minWidth: { lg: "150px" },
@@ -51,10 +50,11 @@ const Renderer = ({ hours, minutes, seconds, completed }: IRenderer) => {
                 eval(name)}
             </Box>
             <Typography
-              variant="body2"
+              variant="caption"
               sx={{
                 textAlign: "center",
                 pt: 2,
+                fontSize: { sm: "16px" },
                 textTransform: "uppercase",
               }}
             >

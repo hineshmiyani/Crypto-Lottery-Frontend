@@ -32,7 +32,8 @@ const DrawBox = ({ contract }: any) => {
           spacing={1}
           justifyContent="space-between"
           alignItems="center"
-          sx={{ p: 1 }}
+          py={1}
+          whiteSpace={"nowrap"}
         >
           {/* Left Ctn */}
           <Stack sx={statsStyles}>
