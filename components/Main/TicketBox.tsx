@@ -93,7 +93,6 @@ const TicketBox = ({ contract }: any) => {
               {currency}
             </Typography>
           </Stack>
-
           <Stack
             direction="row"
             justifyContent="space-between"
@@ -121,7 +120,6 @@ const TicketBox = ({ contract }: any) => {
               onChange={(e) => setQuantity(+e.target.value)}
             />
           </Stack>
-
           <Stack
             spacing={1}
             sx={{
@@ -173,7 +171,7 @@ const TicketBox = ({ contract }: any) => {
               },
             }}
             disabled={
-              expiration?.toString() > Date.now().toString() ||
+              expiration?.toString() < Date.now().toString() ||
               remainingTickets?.toNumber() === 0
             }
             onClick={handleClick}
@@ -192,11 +190,11 @@ const TicketBox = ({ contract }: any) => {
             </Typography>
 
             <Stack
-              spacing={1}
               direction="row"
               flexWrap="wrap"
               maxWidth="384px"
               rowGap={1}
+              columnGap={1}
             >
               {Array(userTickets)
                 .fill("")
